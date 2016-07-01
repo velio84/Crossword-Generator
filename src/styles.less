@@ -1,0 +1,101 @@
+@brand-primary: #43d274;
+@gray: #ddd;
+@gray-lighter: lighten(@gray, 10%);
+@gray-darker: darken(@gray, 10%);
+@gray-darkest: darken(@gray, 25%);
+@white: #fff;
+
+@font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-serif: Georgia, "Times New Roman", Times, serif;
+
+@font-size-base: 14px;
+@font-size-small: ceil((@font-size-base * 0.85));
+
+
+.crossword-generator {
+  font-size: @font-size-base;
+  font-family: sans-serif;
+  text-align: center;
+
+  h1 {
+    color: @brand-primary;
+    margin: 20px;
+  }
+
+  section {
+    margin: 20px;
+    padding: 10px;
+
+    form {
+      textarea {
+        display: block;
+        margin: 20px auto;
+        padding: 5px;
+        border: 1px solid @gray-darker;
+        border-radius: 3px;
+
+        font-size: @font-size-small;
+        color: @gray-darkest;
+
+        &:focus {
+          outline: none;
+          border: 1px solid @brand-primary;
+        }
+      }
+
+      input {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 20px;
+
+        font-weight: 600;
+        text-transform: uppercase;
+
+        background-color: @brand-primary;
+        color: @white;
+
+        &:hover {
+          cursor: pointer;
+          background-color: darken(@brand-primary, 5%);
+        }
+
+        &:focus {
+          outline: none;
+          background-color: lighten(@brand-primary, 10%);;
+        }
+      }
+    }
+
+    table {
+      margin: auto;
+      border-collapse: collapse;
+
+      td {
+        width: 20px;
+        height: 20px;
+
+        border: 1px solid @gray-darker;
+
+        font-size: @font-size-small;
+        font-weight: 100;
+        text-align: center;
+
+        &.empty {
+          background-color: @gray;
+        }
+
+        &.letter {
+
+          &:hover {
+            cursor: help;
+            background-color: @brand-primary;
+          }
+        }
+      }
+    }
+
+    p {
+      color: @gray-darkest;
+    }
+  }
+}

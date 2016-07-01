@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Crossword</title>
+</head>
+
+<body class="crossword-generator">
+
+  <section>
+
+    <h1>Crossword Generator v.0.1</h1>
+
+    <form name="words" class="words" method="post">
+
+      <label for="words-input">
+        Please enter words, separated by a comma ( , ) in order to generate a crossword puzzle.
+      </label>
+
+      <textarea id="words-input" name="words-input" rows="4" cols="40" placeholder="Enter the words here"></textarea>
+
+      <input type="submit" name="words-submit" value="Submit">
+
+    </form>
+  </section>
+
+  <section>
+    <div id="projection"></div>
+  </section>
+
+  <section>
+    <p id="words-entered"></p>
+    <p id="words-left"></p>
+  </section>
+
+  <script src="bundle.js"></script>
+
+</body>
+
+</html>
